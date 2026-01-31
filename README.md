@@ -12,12 +12,12 @@ O projeto é dividido em três camadas principais:
 
 ```mermaid
 graph TD
-    A[Usuário / Navegador] -- Socket.IO --> B[Servidor Python (Flask)]
-    B -- TCP Socket (Porta 23) --> C[ESP32]
-    C -- Serial (UART) --> D[Switch Cisco]
-    D -- Serial (UART) --> C
-    C -- TCP Socket --> B
-    B -- Socket.IO --> A
+    A["Usuário / Navegador"] -- Socket.IO --> B["Servidor Python (Flask)"]
+    B -- "TCP Socket (Porta 23)" --> C["ESP32"]
+    C -- "Serial (UART)" --> D["Switch Cisco"]
+    D -- "Serial (UART)" --> C
+    C -- "TCP Socket" --> B
+    B -- "Socket.IO" --> A
 ```
 
 ---
