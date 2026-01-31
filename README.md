@@ -11,13 +11,13 @@ O projeto é dividido em três camadas principais:
 3.  **Hardware (ESP32):** Firmware que converte pacotes TCP recebidos via Wi-Fi em sinais Seriais (UART) para o switch, e vice-versa.
 
 ```mermaid
-graph TD;
-    A[Usuário / Navegador] -- Socket.IO --> B[Servidor Python (Flask)];
-    B -- TCP Socket (Porta 23) --> C[ESP32];
-    C -- Serial (UART) --> D[Switch Cisco];
-    D -- Serial (UART) --> C;
-    C -- TCP Socket --> B;
-    B -- Socket.IO --> A;
+graph TD
+    A[Usuário / Navegador] -- Socket.IO --> B[Servidor Python (Flask)]
+    B -- TCP Socket (Porta 23) --> C[ESP32]
+    C -- Serial (UART) --> D[Switch Cisco]
+    D -- Serial (UART) --> C
+    C -- TCP Socket --> B
+    B -- Socket.IO --> A
 ```
 
 ---
